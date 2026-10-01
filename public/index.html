@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tawuniya Visit Fetcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <div id="loginPanel" class="panel">
+      <h2>Log in</h2>
+      <input id="username" type="text" placeholder="Username" />
+      <input id="password" type="password" placeholder="Password" />
+      <button id="loginBtn">Log in</button>
+      <div id="loginStatus" class="status-detail"></div>
+    </div>
+
+    <div id="otpPanel" class="panel hidden">
+      <h2>Enter OTP</h2>
+      <p class="status-detail">Check your phone for the code sent by Tawuniya.</p>
+      <input id="otp" type="text" placeholder="OTP code" />
+      <button id="otpBtn">Verify</button>
+      <div id="otpStatus" class="status-detail"></div>
+    </div>
+
+    <div id="dataPanel" class="panel hidden">
+      <button id="fetchBtn">Fetch visits</button>
+      <button id="exportBtn" disabled>Export to Excel</button>
+      <div id="fetchStatus" class="status-detail"></div>
+
+      <div class="stats">
+        <span>Records retrieved</span>
+        <strong id="recordCount">0</strong>
+      </div>
+
+      <table>
+        <thead>
+          <tr><th>Visit ID</th><th>Visit Type</th><th>Policy No</th><th>Status</th></tr>
+        </thead>
+        <tbody id="recordsBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

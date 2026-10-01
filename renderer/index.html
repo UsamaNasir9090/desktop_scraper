@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desktop Scraper</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="toolbar">
+        <button id="openWebsiteBtn">Open Website</button>
+        <button id="stopBtn" class="secondary">Stop</button>
+      </div>
+
+      <div class="status-panel">
+        <div class="label">Status</div>
+        <div id="statusText" class="status-text">Waiting</div>
+        <div id="statusDetail" class="status-detail">Ready</div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span>Records Retrieved</span>
+          <strong id="recordCount">0</strong>
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+          <tr>
+    <th>Visit ID</th>
+    <th>Visit Type</th>
+    <th>Policy No</th>
+    <th>Status</th>
+  </tr>
+</thead>
+          <tbody id="recordsBody"></tbody>
+        </table>
+      </div>
+
+      <div class="footer-actions">
+        <button id="exportBtn">Export to Excel</button>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>
